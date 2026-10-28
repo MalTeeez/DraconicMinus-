@@ -2,7 +2,6 @@ package ru.nanolive.draconicplus.common.fusioncrafting.network;
 
 import java.io.IOException;
 
-import com.brandon3055.brandonscore.BrandonsCore;
 
 import cpw.mods.fml.relauncher.Side;
 import net.minecraft.entity.player.EntityPlayer;
@@ -193,8 +192,8 @@ public class PacketTileMessage extends AbstractMessage.AbstractServerMessage<Pac
 
 	@Override
 	protected void process(EntityPlayer player, Side side) {
-        TileEntity tile = BrandonsCore.proxy.getMCServer().getEntityWorld().getTileEntity(tilePos.x, tilePos.y, tilePos.z);
-        if (tile instanceof TileInventoryBase) {
+        TileEntity tile = player.worldObj.getTileEntity(tilePos.x, tilePos.y, tilePos.z);
+        if (tile instanceof TileInventoryBase && ((TileInventoryBase) tile).isUseableByPlayer(player)) {
         	((TileInventoryBase) tile).receivePacketFromClient(this, (EntityPlayerMP) player);
         }
 	}

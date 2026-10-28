@@ -202,7 +202,8 @@ public class DPEffectHandler {
 
     @SubscribeEvent
     public void worldLoad(WorldEvent.Load event) {
-        effectRenderer.clearEffects(event.world);
+        // Integrated server worlds fire this too; only track the client world
+        if (event.world.isRemote) effectRenderer.clearEffects(event.world);
     }
 
     @SideOnly(Side.CLIENT)

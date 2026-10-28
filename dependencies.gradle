@@ -1,16 +1,13 @@
 // Add your dependencies here
 
 dependencies {
-    api("com.github.GTNewHorizons:Draconic-Evolution:1.1.15-GTNH:dev")
-    compile("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
-    api("com.github.GTNewHorizons:CraftTweaker:3.2.11:dev")
-    compile("curse.maven:brandons-core-231382:2297163")
+    api("com.github.GTNewHorizons:Draconic-Evolution:1.5.35-GTNH:dev")
+    api("com.github.GTNewHorizons:CraftTweaker:3.4.8:dev")
+    implementation("com.github.GTNewHorizons:BrandonsCore:1.2.1-GTNH:dev")
+    // CodeChickenLib was merged into CodeChickenCore
+    implementation("com.github.GTNewHorizons:CodeChickenCore:1.4.22:dev")
 
-    compileOnly("com.github.GTNewHorizons:NotEnoughItems:2.2.3-GTNH:dev") {
+    compileOnly("com.github.GTNewHorizons:NotEnoughItems:2.8.169-GTNH:dev") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:CodeChickenLib:1.1.5.1:dev") {
-        transitive = false
-    }
-
 }

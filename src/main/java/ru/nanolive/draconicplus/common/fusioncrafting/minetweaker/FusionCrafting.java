@@ -17,8 +17,8 @@ import ru.nanolive.draconicplus.common.fusioncrafting.FusionRecipeAPI;
 import ru.nanolive.draconicplus.common.fusioncrafting.IFusionRecipe;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
-import static ru.nanolive.draconicplus.common.fusioncrafting.RecipeManager.*;
-import static ru.nanolive.draconicplus.common.fusioncrafting.RecipeManager.RecipeDifficulty.*;
+import static ru.nanolive.draconicplus.common.fusioncrafting.RecipeManager.addFusion;
+import static ru.nanolive.draconicplus.common.fusioncrafting.RecipeManager.RecipeDifficulty.NORMAL;
 
 import java.util.ArrayList;
 import java.util.List;

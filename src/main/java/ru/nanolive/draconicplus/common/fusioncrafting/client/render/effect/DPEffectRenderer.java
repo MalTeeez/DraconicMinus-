@@ -18,7 +18,11 @@ import ru.nanolive.draconicplus.common.fusioncrafting.client.render.vertex.Defau
 
 import org.lwjgl.opengl.GL11;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Queue;
 import java.util.concurrent.Callable;
 
 /**

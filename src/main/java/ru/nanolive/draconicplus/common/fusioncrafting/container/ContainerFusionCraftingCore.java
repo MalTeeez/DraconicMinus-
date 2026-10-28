@@ -50,7 +50,7 @@ public class ContainerFusionCraftingCore extends ContainerDPBase<TileFusionCraft
 				if (!mergeItemStack(stack, 0, 36, false)){
 					return null;
 				}
-			}else if (!tile.isItemValidForSlot(0, stack) || !mergeItemStack(stack, 36, 36 + tile.getSizeInventory(), false)){
+			}else if (!mergeItemStack(stack, 36, 37, false)){ // input slot only; mergeItemStack ignores OutputSlot.isItemValid
 				return null;
 			}
 

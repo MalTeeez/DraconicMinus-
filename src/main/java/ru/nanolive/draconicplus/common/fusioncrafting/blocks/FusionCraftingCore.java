@@ -64,9 +64,7 @@ public class FusionCraftingCore extends BlockDP implements ITileEntityProvider {
                     double d0 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
                     double d1 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
                     double d2 = (double) (worldIn.rand.nextFloat() * f) + (double) (1.0F - f) * 0.5D;
-                    EntityItem entityitem = new EntityItem(worldIn, (double) x + d0, (double) y + d1, (double) z + d2, ci.getStackInCore(0).copy());
-                    if (ci.getStackInSlot(i).hasTagCompound())
-                        entityitem.getEntityItem().setTagCompound(ci.getStackInSlot(i).getTagCompound());
+                    EntityItem entityitem = new EntityItem(worldIn, (double) x + d0, (double) y + d1, (double) z + d2, ci.getStackInSlot(i).copy());
                     entityitem.delayBeforeCanPickup = 10;
                     worldIn.spawnEntityInWorld(entityitem);
                     ci.setStackInCore(i,null);

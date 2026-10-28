@@ -135,14 +135,7 @@ public class EffectTrackerFusionCrafting {
     return (new Matrix4()).translate(position).apply((Transformation)new Scale(scale)).apply((Transformation)rotation);
   }
   
-  private static final ThreadLocal<CCRenderState> instances = ThreadLocal.withInitial(CCRenderState::new);
-  
-  public static CCRenderState instance() {
-    return instances.get();
-  }
-  
   public void renderEffect(Tessellator tessellator, float partialTicks) {
-    CCRenderState ccrs = instance();
     float relativeX = (float)(this.prevPos.x + (this.pos.x - this.prevPos.x) * partialTicks - interpPosX);
     float relativeY = (float)(this.prevPos.y + (this.pos.y - this.prevPos.y) * partialTicks - interpPosY);
     float relativeZ = (float)(this.prevPos.z + (this.pos.z - this.prevPos.z) * partialTicks - interpPosZ);

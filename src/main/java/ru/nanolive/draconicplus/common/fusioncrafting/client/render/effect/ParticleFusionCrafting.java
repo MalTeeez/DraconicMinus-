@@ -140,16 +140,10 @@ public class ParticleFusionCrafting extends DPParticle {
         return new Matrix4().translate(position).apply(new Scale(scale)).apply(rotation);
     }
     
-    private static final ThreadLocal<CCRenderState> instances = ThreadLocal.withInitial(CCRenderState::new);
-    
-    public static CCRenderState instance() {
-  	    return instances.get();
-    }
-    
     @Override
     public void renderParticle(Tessellator tessellator, float partialTicks, float rotationX, float rotationZ, float rotationYZ, float rotationXY, float rotationXZ) {
     	tessellator.draw();
-    	CCRenderState ccrs = instance();
+    	CCRenderState ccrs = CCRenderState.instance();
         ccrs.startDrawing();
         ccrs.draw(); //End Draw
         //region Icosahedron
